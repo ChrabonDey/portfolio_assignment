@@ -10,6 +10,54 @@ const showMenu = (toggleId, navId) =>{
     }
 }
 showMenu('nav-toggle','nav-menu')
+const menuToggle = document.getElementById('menuToggle');
+const menuOverlay = document.getElementById('menuOverlay');
+const menuClose = document.getElementById('menuClose');
+const menuLinks = document.querySelectorAll('.menu-content a');
+
+menuToggle.addEventListener('click', () => {
+  menuOverlay.classList.add('active');
+});
+
+menuClose.addEventListener('click', () => {
+  menuOverlay.classList.remove('active');
+});
+
+
+  function toggleSearch() {
+    const searchBox = document.getElementById("searchBox");
+    const sectionList = document.getElementById("sectionList");
+
+    // Toggle visibility
+    if (searchBox.style.display === "block") {
+      searchBox.style.display = "none";
+      sectionList.style.display = "none";
+    } else {
+      searchBox.style.display = "block";
+      sectionList.style.display = "block";
+      searchBox.focus();
+    }
+  }
+
+  function searchSection() {
+    const input = document.getElementById("searchBox").value.toLowerCase();
+    const items = document.querySelectorAll("#sectionList li");
+
+    items.forEach((item) => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(input) ? "block" : "none";
+    });
+  }
+
+
+
+// Close menu on link click
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuOverlay.classList.remove('active');
+  });
+});
+
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
