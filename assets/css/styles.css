@@ -1,6 +1,6 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
-
+ @import url('https://fonts.cdnfonts.com/css/canela-text-trial');
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 4rem;
@@ -49,6 +49,8 @@
 }
 body {
   background-color: #f3f4f4;
+  font-family: 'Canela Text Trial', sans-serif;
+
 }
 
 html {
@@ -84,8 +86,49 @@ body {
   font-size: 24px;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap:20px
 
 }
+.sub{
+   font-size: 20px;
+   font-weight:normal;
+   color:white;
+   display: flex;
+   align-items: center;
+   gap:10px
+  }
+  .m{
+    background-color: red;
+     height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border:1px solid red
+  }
+  .d{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-left:20px;
+    font-size: 20px;
+    height: 10px;
+    opacity: 0.8;
+    
+  }
+  .logo-main {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between image and text */
+}
+
+.logo-img {
+  width: 70px;  /* adjust size as needed */
+  height: 70px; /* keep aspect ratio */
+  object-fit: contain;
+}
+
 
 /* Unified Search + Menu Button Group */
 .nav-controls {
@@ -127,9 +170,8 @@ body {
 .menu-toggle:hover {
   background-color: #111;
 }
-
-/* Hero Section */
 .hero {
+  position: relative;
   height: 100vh;
   background: url('../img/cloud-forest-landscape.jpg') no-repeat center center/cover;
   display: flex;
@@ -137,32 +179,37 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  opacity: 30px;
   padding: 0 20px;
-  
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* 40% black overlay */
   z-index: 1;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+  z-index: 0;
+}
+
+
 .hero-content {
   padding: 20px;
+  
 }
 
 .hero-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
 }
+.heo{
+  
+   margin-top:6em;
+   
+}
 
 .home__title-color {
   font-size: 64px;
   font-weight: 900;
-  color: white;
+  color: black;
 }
 
 
@@ -196,6 +243,127 @@ body {
   text-align: left;
   margin-top: auto; /* pushes it to bottom */
 }
+.about {
+  padding: 60px 20px;
+  background-color: #f6f5f3; /* Light gray background */
+  font-family: 'Canela Text Trial', serif;
+  color: #1a1a1a;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #222;
+  font-family: 'Georgia', serif;
+}
+
+.about__container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about__img {
+  flex: 1 1 350px;
+}
+
+.about__img img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.about__content {
+  flex: 1 1 500px;
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  color: #1a1a1a;
+}
+
+/* Big stylized quote marks */
+.about__quote {
+  position: relative;
+  padding-left: 3rem; /* space for the big quote */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Georgia", serif;
+}
+
+.about__quote::before {
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-size: 5rem;
+  color: rgba(200, 0, 0, 0.3); 
+  font-family: "Canela Text Trial", serif;
+  line-height: 1;
+  font-weight: bolder;
+  user-select: none;
+  pointer-events: none;
+}
+
+.about__name {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 4px;
+  font-family: 'Georgia', serif;
+}
+
+.about__role {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+  font-family: 'Georgia', serif;
+}
+
+.about__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #5a5a5a;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.about__btn:hover {
+  background-color: #333;
+  box-shadow: 0 6px 12px rgb(0 0 0 / 0.3);
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about__container {
+    flex-direction: column;
+  }
+
+  .about__img, 
+  .about__content {
+    flex: 1 1 100%;
+  }
+
+  .about__btn {
+    justify-content: center;
+  }
+}
+
 .work {
     background-color: #000;
     padding: 4rem 0;
@@ -211,8 +379,8 @@ body {
 
 .work__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
     padding: 0 2rem;
 }
 
@@ -254,6 +422,195 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+.mywork {
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 3vw; /* responsive padding */
+  max-width: 600px; 
+}
+.x hr {
+  border: none;
+  height: 4px; /* makes it bold */
+  background-color: #000; /* black color, change as needed */
+  width: 95%; /* reduced width */
+  margin: 20px auto; /* centers it */
+  border-radius: 2px; /* slight curve for modern look */
+}
+
+.work-top {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* Text Section */
+.work-text {
+  flex: 1 1 50%;
+  padding: 3vw;
+}
+
+.work-text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.work-text p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Video Section */
+.work-video {
+  position: relative;
+  flex: 1 1 35%;
+  max-width: 400px;
+  margin-right: 2rem;
+}
+
+.work-video img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Container */
+.work__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Card Styling */
+.work__card {
+  background-color: #e3e5e5;
+  width: 400px;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.work__card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.work__card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Title */
+.work__card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem 1.2rem 0.5rem;
+  font-family: Georgia, serif;
+}
+
+/* Paragraph */
+.work__card p {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0 1.2rem 1.2rem;
+  color: #111;
+  font-weight: 400;
+  font-family: Georgia, serif;
+}
+
+/* Learn More Link */
+.learn-more {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #000;
+  text-decoration: none;
+  padding: 1rem 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 0.2s ease;
+}
+
+.learn-more:hover {
+  color: #0056b3;
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .work-text h2 {
+    font-size: 2.4rem;
+  }
+  .work__card {
+    width: 320px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .work-text {
+    flex: 1 1 100%;
+    padding: 5vw;
+    text-align: center;
+  }
+  .work-video {
+    flex: 1 1 100%;
+    max-width: 90%;
+    margin-right: 0;
+  }
+  .work__card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-text {
+    padding: 4vw;
+  }
+  .work-text h2 {
+    font-size: 1.8rem;
+  }
+  .work__card {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 
 
@@ -413,6 +770,8 @@ img {
 
 .section-list li {
   margin: 8px 0;
+  display:flex;
+  flex-direction: column;
 }
 
 .section-list li a {
@@ -954,40 +1313,77 @@ img {
 }
 
 /* ===== FOOTER =====*/
-.footer {
-  background-color: var(--second-color);
-  color: #fff;
+.custom-footer {
+  background-color: #111;
+  color: #dcdcdc;
+  padding: 4rem 2rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   text-align: center;
-  font-family: var(--body-font);
-  font-weight: var(--font-semi);
-  padding: 3rem 0;
+  margin-bottom: 3rem;
 }
 
-.footer__title {
-  font-family: var(--heading-font);
-  font-size: var(--h1-font-size);
-  margin-bottom: var(--mb-3);
+.footer-col h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
-.footer__social {
-  margin-bottom: var(--mb-3);
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer__icon {
-  font-size: 1.75rem;
+.footer-col ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
   color: #fff;
-  margin: 0 var(--mb-2);
-  transition: color 0.3s ease;
 }
 
-.footer__icon:hover {
-  color: var(--first-color);
+.footer-bottom {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.footer__copy {
-  font-size: var(--smaller-font-size);
-  opacity: 0.8;
+.footer-logo img {
+  height: 100px;
+  margin-bottom: 1rem;
+  margin:0 auto;
 }
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
 
 /* ===== MEDIA QUERIES =====*/
 @media screen and (max-width: 320px) {

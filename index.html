@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/styles.css">
+          <style>
+        @import url('https://fonts.cdnfonts.com/css/canela-text-trial');
+    </style>
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -14,7 +17,21 @@
     <body>
         <!--===== HEADER =====-->
       <header class="header">
-  <div class="logo">Chrabon</div>
+ <div class="logo">
+  <div class="logo-main">
+    <img src="./assets/img/Gemini_Generated_Image_ynpjcxynpjcxynpj-removebg-preview.png" alt="Logo" class="logo-img" />
+    <div>
+      Chrabon
+      <span class="d">Sarker</span>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="m"></div>
+    Passionate about learning anything I can get my hands on
+  </div>
+</div>
+
+  
   <div class="nav-controls">
   <span class="search-toggle" onclick="toggleSearch()">🔍 Search</span>
   <input type="text" id="searchBox" class="search-box" placeholder="Search sections..." onkeyup="searchSection()" />
@@ -34,8 +51,8 @@
       <section class="hero">
         <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div>
-      <h1>This is <br><span class="home__title-color">Chrabon Dey Sarker</span></h1>
+    <div class="heo">
+      <h1><span class="home__title-color">Chrabon Dey Sarker</span></h1>
     <p>
       I'm a passionate web developer with a focus on building clean, <br>responsive, and engaging digital experiences.
     </p>
@@ -68,65 +85,83 @@
 
 
             <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+          <section class="about section" id="about">
+  <h2 class="section-title">About</h2>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/1695883639162-removebg-preview.png" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Chrabon Dey Sarker</h2>
-                        <p class="about__text">   I'm a passionate web developer with a focus on building clean, responsive, and engaging digital experiences. With a strong background in HTML, CSS, JavaScript, and frameworks like React and Node.js, I love turning ideas into reality through code.
-        I enjoy exploring new technologies, solving real-world problems, and continuously improving my skills. Whether working on a personal project or collaborating with a team, I bring creativity, precision, and commitment to every line of code.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-
-  <section class="work section" id="work">
-    <div class="work-section">
-  <h2 class="work-title">My Work</h2>
-  <p class="work-intro">
-    Since starting my journey in 2023, I have been pushing innovations in web development and technology into the future.
-  </p>
-  
-</div>
- <hr>
-
-    <div class="work__container bd-grid">
-        <div class="work__item">
-            <h3 class="work__subtitle">Calculator</h3>
-            <a href="https://codealpha-calculator.onrender.com/" class="work__img">
-                <img src="assets/img/342339412_6d054e9b-e837-4de5-9046-315b80bd7d8a.jpg" alt="Calculator Project" class="work__img">
-            </a>
-            <p class="work__description">CodeAlpha Calculator<br>Developed in 2022, this was my first significant project where I created a simple yet functional calculator application. Utilizing HTML5, CSS3, and JavaScript, I focused on building a user-friendly interface and implementing core arithmetic operations. This project laid the foundation for my understanding of front-end development and problem-solving through code, marking the beginning of my journey into web engineering.</p>
-        </div>
-        <div class="work__item">
-            <h3 class="work__subtitle">Wedding Form</h3>
-            <a href="https://github.com/ChrabonDey/Calendar" class="work__img">
-                <img src="assets/img/21935163_6433982.jpg" alt="Calendar Project" class="work__img">
-            </a>
-            <p class="work__description">wedding app<br>Currently under development in 2025, this responsive wedding-app showcases my evolving skills in modern web technologies. Built with HTML5, CSS3, and JavaScript, it features dynamic date management, event scheduling, and a sleek, mobile-friendly design. This ongoing project reflects my commitment to creating practical tools that enhance user productivity while continuously refining my expertise in responsive design and interactivity.</p>
-        </div>
-        <div class="work__item">
-            <h3 class="work__subtitle">Portfolio</h3>
-            <a href="https://portfolio-sdjq.onrender.com/" class="work__img">
-                <img src="assets/img/work3.jpg" alt="Portfolio Project" class="work__img">
-            </a>
-            <p class="work__description">Portfolio Redesign<br>Planned for late 2025, this ambitious project aims to revolutionize my online presence with an AI-enhanced portfolio. The redesign will incorporate advanced JavaScript frameworks, machine learning integrations for personalized content, and a highly interactive user interface. This future endeavor highlights my forward-thinking approach to web development, blending creativity with cutting-edge technology to deliver a unique digital experience.</p>
-        </div>
-        <div class="work__item">
-            <h3 class="work__subtitle">Daraz_Clone</h3>
-            <a href="https://daraz-clone-8x0k.onrender.com/" class="work__img">
-                <img src="assets/img/Screenshot_190.png" alt="Portfolio Project" class="work__img">
-            </a>
-            <p class="work__description">Daraz Clone <br> is a fully responsive e-commerce website inspired by Daraz, offering a seamless shopping experience. It includes features like product browsing, advanced search, user authentication, shopping cart, order management, and admin control panel. Built with modern web technologies, it ensures fast performance, clean UI, and mobile-friendly design.</p>
-        </div>
+  <div class="about__container">
+    <div class="about__img">
+      <img src="assets/img/1695883639162-removebg-preview.png" alt="Chrabon Dey Sarker" />
     </div>
-    <a href="https://github.com/ChrabonDey" class="work__explore">Explore more of my work</a>
+
+    <div class="about__content">
+      <blockquote class="about__quote">
+        “I'm a passionate web developer with a focus on building clean, responsive, and engaging digital experiences. With a strong background in HTML, CSS, JavaScript, and frameworks like React and Node.js, I love turning ideas into reality through code.
+       ”
+      </blockquote>
+
+      <p class="about__name">Chrabon Dey Sarker</p>
+      <p class="about__role">Web Developer</p>
+
+      <a href="#" class="about__btn">
+        <span>Read more about my work</span> &rarr;
+      </a>
+    </div>
+  </div>
 </section>
+
+<section class="mywork section" id="work">
+  <div class="work-header">
+    <h1 class="main-title">My PPortfolio of Projects
+      <br>
+       & Creations</h1>
+    <div class="x">
+      <hr>
+    </div>
+    <div class="work-top">
+      <div class="work-text">
+        <h2>How building projects has helped shape my web development journey</h2>
+        <p>Every project I've built since 2023 reflects a commitment to learning, creativity, and problem-solving in real-world scenarios. These works show how ideas become reality through code.</p>
+      </div>
+      <div class="work-video">
+        <img src="assets/img/view-balloon-twist-sculpture.jpg" alt="Video preview" />
+        <a href="https://portfolio-sdjq.onrender.com/" class="play-button">▶ View Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="work__container">
+    <!-- Calculator -->
+    <div class="work__card">
+      <img src="assets/img/342339412_6d054e9b-e837-4de5-9046-315b80bd7d8a.jpg" alt="Calculator" />
+      <h3>Calculator</h3>
+      <p><strong>CodeAlpha Calculator</strong><br>Developed in 2022, this was my first significant project where I created a simple yet functional calculator application. Utilizing HTML5, CSS3, and JavaScript, I focused on building a user-friendly interface and implementing core arithmetic operations.</p>
+      <a href="https://codealpha-calculator.onrender.com/" class="learn-more">
+        <span class="arrow-icon">➜</span> Learn more about this project
+      </a>
+    </div>
+
+    <!-- Wedding App -->
+    <div class="work__card">
+      <img src="assets/img/21935163_6433982.jpg" alt="Wedding App" />
+      <h3>Wedding Form</h3>
+      <p><strong>Wedding App</strong><br>Currently under development in 2025, this responsive app showcases my skills in event scheduling, mobile-first design, and form-based interaction. Built using HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/ChrabonDey/Calendar" class="learn-more">
+        <span class="arrow-icon">➜</span> Learn more about this project
+      </a>
+    </div>
+
+    <!-- Daraz Clone -->
+    <div class="work__card">
+      <img src="assets/img/Screenshot_190.png" alt="Daraz Clone" />
+      <h3>Daraz_Clone</h3>
+      <p><strong>Daraz Clone</strong><br>A full e-commerce clone with modern design. It includes product browsing, search, cart, order flow, and admin control. Fully responsive and inspired by the real Daraz platform.</p>
+      <a href="https://daraz-clone-8x0k.onrender.com/" class="learn-more">
+        <span class="arrow-icon">➜</span> Learn more about this project
+      </a>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -239,14 +274,51 @@
 </section>
 
        
-        <footer class="footer">
-            <p class="footer__title">Chrabon</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-            </div>
-        </footer>
+        <footer class="custom-footer">
+  <div class="footer-columns">
+    <div class="footer-col">
+      <h4>About Me</h4>
+      <ul>
+        <li><a href="#">My Projects</a></li>
+        <li><a href="#">Tech Stack</a></li>
+        <li><a href="#">Certifications</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">GitHub Repos</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Email Me</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Location</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-logo">
+      <img src="/assets/img/Gemini_Generated_Image_ynpjcxynpjcxynpj-removebg-preview.png" alt="Hasnat Logo">
+    </div>
+
+    <div class="footer-socials">
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-tiktok'></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-youtube'></i></a>
+    </div>
+  </div>
+
+  <p class="footer-copy">© 2025 Chrabon. All rights reserved.</p>
+</footer>
+
 
 
         <!--===== SCROLL REVEAL =====-->
